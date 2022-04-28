@@ -2,7 +2,7 @@ import React from 'react';
 
 function TodoItem ({val}){
 const {id, task } = val;
-   return <li>{id}:{task}</li>
+   return <li><input type='checkbox' />{id}:{task}</li>
 }
 
 export default TodoItem
