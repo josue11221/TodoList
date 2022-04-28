@@ -8,9 +8,10 @@ function InputList (){
   const  handleTask = () =>{
     const tasker = newTask.current.value;
     
-    if(taskers === '') return;
+    if(tasker === '') return;
     setArr((afterTask)=>{
-      return [...afterTask, {id:uuid(),task} ] 
+      const {id, task} = afterTask
+      return [...afterTask, {id:uuid,task} ] 
     })
   }
 
