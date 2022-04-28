@@ -7,7 +7,7 @@ const {id, task} = tasks
     <>
       <ul>
         {tasks.map((val)=>
-        <TododItem val={val} />)}
+        <TododItem key= {val.id} val={val} />)}
       </ul>
     </>
   )
