@@ -45,7 +45,7 @@ export default function App() {
       <input ref ={newTask} type = 'text' 
       placeholder = 'ingrse tarea'
  />
-      <button onClick ={handletask}> ✖️</button>
+      <button onClick ={handletask}> ➕</button>
       <button onClick={clearTask}>🗑️</button>
       <TodoList tasks= {arr} toggleTask ={toggleTask}/>
       <div>
