@@ -1,4 +1,5 @@
 import React,{useState, useRef}  from "react";
+import {v4 as uuid} from 'uuid';
 import TodoList from "./components/TodoList";
 
 export default function App() {
@@ -12,7 +13,7 @@ export default function App() {
     if(task === '') return;
     
     setArr((aftertask)=>{
-      return [...aftertask, {id:3,task}]
+      return [...aftertask, {id:uuid(),task}]
     })
   }
 
