@@ -1,6 +1,7 @@
 .lista{
    list-style: none;
   background:#8CE7D9 ;
-  padding:9px 100px;
-  
+  margin: 0 0 10px -30px;
+  width: 300px;
+  padding: 10px 0;
 }
