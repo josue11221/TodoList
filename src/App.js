@@ -31,7 +31,8 @@ export default function App() {
     if(task === '') return;
     
     setArr((aftertask)=>{
-      return [...aftertask, {id:uuid(),task}]
+      const idPlus=0
+      return [...aftertask, {id:{idPlus},task}]
     })
   
   }
