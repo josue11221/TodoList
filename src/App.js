@@ -4,7 +4,14 @@ import TodoList from "./components/TodoList";
 
 export default function App() {
   const newTask = useRef()
-  const [arr, setArr]= useState([{id:1, task:"sacar al perro"}])
+  const [arr, setArr]= useState([{id:1, task:"sacar al perro", comleted:false}])
+
+  const toggleTask = (id) =>{
+    const newTodo = [...arr]
+    const taskin = newTodo.find((taski)=> taski.id === id )
+    taskin.completed = !taskin.completed;
+    setArr(newTodo)
+  }
 
   const handletask = () =>{
   
@@ -12,7 +19,7 @@ export default function App() {
 
     if(task === '') return;
     
-    setArr((aftertask)=>{
+    seatArr((aftertask)=>{
       return [...aftertask, {id:uuid(),task}]
     })
   }
@@ -20,9 +27,10 @@ export default function App() {
   return (
     <div>
       <input ref ={newTask} type = 'text' 
-      placeholder = 'ingrse tarea' />
+      placeholder = 'ingrse tarea'
+ />
       <button onClick ={handletask}> +</button>
-      <TodoList tasks= {arr}/>
+      <TodoList tasks= {arr} toggleTask ={toggleTask}/>
     </div>
   );
 }

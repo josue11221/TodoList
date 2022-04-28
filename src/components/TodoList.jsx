@@ -2,7 +2,7 @@ import React from 'react';
 import TododItem from './TodoItem';
 
 function TodoList ({tasks}){
-const {id, task} = tasks
+const {id, task, completed} = tasks
   return(
     <>
       <ul>
