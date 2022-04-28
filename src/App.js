@@ -20,7 +20,7 @@ export default function App() {
    const storeTodo = JSON.parse(localStorage.getItem(KEY))
    if(storeTodo)
    setArr(storeTodo);
- },[arr])
+ },[])
 
   const handletask = () =>{
   
