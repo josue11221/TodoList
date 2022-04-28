@@ -1,6 +1,8 @@
 import React,{useState, useRef, useEffect}  from "react";
 import {v4 as uuid} from 'uuid';
 import TodoList from "./components/TodoList";
+import './Style_components/App.css';
+import './Style_components/TodoItem.css'
 const KEY = "todoApp.arr"
 export default function App() {
   const newTask = useRef()
@@ -41,12 +43,14 @@ export default function App() {
   }
 
   return (
-    <div>
-      <input ref ={newTask} type = 'text' 
+    <div className= 'box'>
+      <div>
+        <input ref ={newTask} type = 'text' 
       placeholder = 'ingrse tarea'
  />
-      <button onClick ={handletask}> ➕</button>
-      <button onClick={clearTask}>🗑️</button>
+        <button onClick ={handletask}> ➕</button>
+        <button onClick={clearTask}>🗑️</button>
+      </div>
       <TodoList tasks= {arr} toggleTask ={toggleTask}/>
       <div>
        tienes {arr.filter((todo)=>!todo.completed).length} tareas por acabar
