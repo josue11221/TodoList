@@ -8,3 +8,16 @@
   height: auto;
   text-align: center;
 }
+
+.box input{
+  padding: 10px 70px;
+  border: none;
+  border-radius: 9px;
+}
+button{
+  border:none;
+  border-radius: 9px;
+  padding: 10px 17px;
+  margin: 10px;
+  background-color: lightbluea;
+}

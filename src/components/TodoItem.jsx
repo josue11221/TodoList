@@ -5,7 +5,7 @@ const {id, task, completed } = val;
 const todoClick=()=>{
    toggleTask(id)
 }
-   return <li className = 'lista'><input type='checkbox' onChange={todoClick} />{id}:{task}</li>
+   return <li className = 'lista'><input type='checkbox' onChange={todoClick} />⏰:{task}</li>
 }
 
 export default TodoItem

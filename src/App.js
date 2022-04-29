@@ -32,7 +32,7 @@ export default function App() {
     
     setArr((aftertask)=>{
       const idPlus=0
-      return [...aftertask, {id:{idPlus},task}]
+      return [...aftertask, {id:uuid(),task}]
     })
   
   }
@@ -45,10 +45,10 @@ export default function App() {
 
   return (
     <div className= 'box'>
-      <div>
         <input ref ={newTask} type = 'text' 
       placeholder = 'ingrse tarea'
  />
+      <div className='btn'>
         <button onClick ={handletask}> ➕</button>
         <button onClick={clearTask}>🗑️</button>
       </div>
